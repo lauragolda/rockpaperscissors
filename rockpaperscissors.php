@@ -39,8 +39,8 @@ class Game{
     }
 }
 
-$player = new Element("Player");
-$computer = new Element("Computer");
+$player = "Player";
+$computer = "Computer";
 
 $rock = new Element("Rock");
 $paper = new Element("Paper");
@@ -80,7 +80,7 @@ $game = new Game($selectedElement, $opponentElement);
 $winner = $game->getWinner();
 
 
-echo $player->getName().": ". $selectedElement->getName() . " VS " .$computer->getName().": ". $opponentElement->getName() . PHP_EOL;
+echo $player.": ". $selectedElement->getName() . " VS " .$computer.": ". $opponentElement->getName() . PHP_EOL;
 if ($winner === null) {
     echo "It's a tie". PHP_EOL;
     exit;
